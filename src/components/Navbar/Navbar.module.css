@@ -1,0 +1,7 @@
+.navbarTitle {
+  width: 100%;
+  margin: 0;
+  color: #333333;
+  text-shadow: 2px 2px 2px #f1f1f1ff;
+  font-size: clamp(4.5rem, 10vw, 8rem);
+}

@@ -1,0 +1,52 @@
+.detailsCharacter__section {
+  grid-column: 1/-1;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.detailsCharacter__back_btn {
+  align-self: flex-start;
+  font-weight: 700;
+}
+.detailsCharacter__back_btn,
+.detailsCharacter__name,
+.detailsCharacter__gender,
+.detailsCharacter__origins,
+.detailsCharacter__place,
+.detailsCharacter__species,
+.detailsCharacter__status {
+  font-size: clamp(1.6rem, 3vw, 3rem);
+}
+.detailsCharacter__article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1.2rem;
+}
+.detailsCharacter__imgContainer {
+  width: 100%;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+.detailsCharacter__img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+.detailsCharacter__name {
+  margin: 1.6rem 0;
+  align-self: center;
+  color: var(--cyan);
+
+  text-shadow: 2px 2px 2px #80cf85, 4px 3px 2px #f3fee3;
+}
+.detailsCharacter__gender,
+.detailsCharacter__origins,
+.detailsCharacter__status,
+.detailsCharacter__species,
+.detailsCharacter__place {
+  font-size: clamp(1.6rem, 3vw, 2rem);
+}

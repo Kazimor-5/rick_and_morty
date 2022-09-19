@@ -1,0 +1,8 @@
+.errorRoute__section {
+  grid-column: 1/4;
+}
+.errorRoute__text {
+  font-size: clamp(2rem, 3vw, 5rem);
+  font-weight: 700;
+  text-align: center;
+}
