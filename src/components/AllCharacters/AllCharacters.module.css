@@ -28,16 +28,25 @@
 .footer__pagination_next,
 .footer__pagination_btn {
   cursor: pointer;
+  border-radius: var(--border-radius);
+  padding: 0.375rem 0.75rem;
+}
+.footer__pagination_btn:hover {
+  background-color: var(--white);
+  transition: var(--transition);
 }
 .footer__pagination_prev,
 .footer__pagination_next,
 .footer__pagination_active {
-  padding: 1rem;
-  background-color: var(--white);
-  border-radius: var(--border-radius);
-  padding: 0.375rem 0.75rem;
   box-shadow: var(--shadow-1);
+  background-color: var(--white);
   transition: var(--transition);
+}
+.footer__pagination_prev,
+.footer__pagination_next,
+.footer__pagination_active,
+.footer__pagination_btn:hover {
+  box-shadow: var(--shadow-3);
 }
 .footer__pagination_active {
   box-shadow: var(--shadow-3);

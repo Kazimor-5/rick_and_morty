@@ -4,6 +4,7 @@ import SingleCharacter from '../SingleCharacter/SingleCharacter';
 import React from 'react';
 import ReactPaginate from 'react-paginate';
 import useFetch from '../../useFetch';
+import BtnUp from '../BtnUp/BtnUp';
 import styles from './AllCharacters.module.css';
 
 const url = 'https://rickandmortyapi.com/api/character/?page=';
@@ -40,6 +41,7 @@ const AllCharacters = () => {
           disabledClassName={styles.footer__pagination_disabled}
           forcePage={page - 1}
         />
+        <BtnUp />
       </footer>
     </>
   );
