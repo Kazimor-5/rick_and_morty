@@ -2,7 +2,7 @@
   height: 100%;
   background-color: var(--grey-100);
   padding: 2.5rem 1.5rem;
-  border-radius: 1.2rem;
+  border-radius: var(--border-radius);
   box-shadow: var(--shadow-3);
   transition: var(--transition);
   display: flex;
@@ -15,18 +15,15 @@
   margin: 0;
   text-align: center;
   color: var(--cyan);
-  text-shadow: 2px 2px 2px #80cf85, 4px 3px 2px #f3fee3;
+  text-shadow: var(--text-shadow);
   font-size: clamp(2rem, 3vw, 2.5rem);
 }
 .singleCharacter__imgContainer {
   width: 100%;
-  border-radius: 1.2rem;
+  border-radius: var(--border-radius);
   overflow: hidden;
 }
 .singleCharacter__img {
-  display: block;
-  width: 100%;
-  object-fit: cover;
   transition: var(--transition);
 }
 .singleCharacter__article:hover {

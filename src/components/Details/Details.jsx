@@ -38,11 +38,7 @@ const Details = () => {
       </Link>
       <article className={styles.detailsCharacter__article}>
         <div className={styles.detailsCharacter__imgContainer}>
-          <img
-            src={image}
-            alt={name}
-            className={styles.detailsCharacter__img}
-          />
+          <img src={image} alt={name} className='img' />
         </div>
         <h2 className={styles.detailsCharacter__name}>{name}</h2>
         <p className={styles.detailsCharacter__gender}>Gender: {gender}</p>

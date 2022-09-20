@@ -9,7 +9,11 @@ const SingleCharacter = (character) => {
     <article className={styles.singleCharacter__article}>
       <h2 className={styles.singleCharacter__name}>{name}</h2>
       <div className={styles.singleCharacter__imgContainer}>
-        <img src={image} alt={name} className={styles.singleCharacter__img} />
+        <img
+          src={image}
+          alt={name}
+          className={`${styles.singleCharacter__img} img`}
+        />
       </div>
       <Link className={`${styles.linksDetail} btn`} to={`/details/${id}`}>
         Détails

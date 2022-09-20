@@ -44,11 +44,12 @@ html {
   /* ? REST OF THE VARIABLES */
   --bg-color: radial-gradient(#fffac6, #e2e98f, #7ec251, #428859);
   --textColor: var(--grey-900);
-  --border-radius: 0.5rem;
+  --border-radius: 1.2rem;
   --letter-spacing: 1px;
   --transition: all 350ms ease-out;
   --max-width: 1170px;
   --fixed-width: 600px;
+  --text-shadow: 2px 2px 2px #80cf85, 4px 3px 2px #f3fee3;
   /* ? BOX SHADOWS */
   --shadow-1: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --shadow-2: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -95,16 +96,17 @@ h4 {
 h5 {
   font-size: 1.25rem;
 }
-small,
-.text_small {
-  font-size: var(--small-text);
-}
 a {
   text-decoration: none;
 }
 ul {
   list-style: none;
   padding: 0;
+}
+.img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
 }
 /* ? BUTTONS */
 .btn {
