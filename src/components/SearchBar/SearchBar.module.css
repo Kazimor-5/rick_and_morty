@@ -1,0 +1,22 @@
+.form__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1.5rem;
+  padding: 1rem;
+  background-color: var(--white);
+  border-radius: 9999px;
+}
+.form__label,
+.form__input {
+  font-size: clamp(1.6rem, 3vw, 2rem);
+}
+.form__label {
+  padding: 0.5rem 0 0 1rem;
+}
+.form__input {
+  line-height: 1;
+  border: none;
+  outline: none;
+  font-family: var(--bodyFont);
+}
