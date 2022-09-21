@@ -42,7 +42,7 @@ const SearchBar = (setError) => {
         name='searchBar'
         id='searchBar'
         className={styles.form__input}
-        // value={searchedCharacter}
+        value={searchedCharacter}
         onChange={(e) => setSearchedCharacter(e.target.value)}
         placeholder='Search character'
       />
