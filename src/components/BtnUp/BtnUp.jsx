@@ -29,7 +29,7 @@ const BtnUp = () => {
           className={styles.btnUp__btn}
           onClick={scrollToTop}
         >
-          <FaChevronUp />
+          <FaChevronUp className={styles.btnUp__icon} />
         </button>
       ) : (
         ''

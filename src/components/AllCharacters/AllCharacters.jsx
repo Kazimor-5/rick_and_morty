@@ -11,7 +11,7 @@ import SearchBar from '../SearchBar/SearchBar';
 const url = 'https://rickandmortyapi.com/api/character/?page=';
 
 const AllCharacters = () => {
-  const { characters, page, setPage, pagesTotal } = useFetch(url);
+  const { characters, setPage, pagesTotal } = useFetch(url);
   const [error, setError] = useState(false);
 
   const changePage = ({ selected }) => {
@@ -20,7 +20,7 @@ const AllCharacters = () => {
 
   return (
     <>
-      <SearchBar setError={setError} />
+      <SearchBar setError={setError} characters={characters} />
       {error ? (
         <main className={styles.main__error}>
           <h2 className={styles.heading__error}>
@@ -50,7 +50,6 @@ const AllCharacters = () => {
               pageClassName={styles.footer__pagination_btn}
               activeClassName={styles.footer__pagination_active}
               disabledClassName={styles.footer__pagination_disabled}
-              forcePage={page - 1}
             />
             <BtnUp />
           </footer>

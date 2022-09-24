@@ -8,6 +8,9 @@
   font-size: clamp(1.6rem, 3vw, 2rem);
   border: transparent;
   position: fixed;
-  bottom: 2.6rem;
-  right: 2.6rem;
+  bottom: 5.5rem;
+  right: 2rem;
+}
+.btnUp__icon {
+  color: var(--cyan);
 }

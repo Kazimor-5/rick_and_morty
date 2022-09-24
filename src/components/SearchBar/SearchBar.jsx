@@ -6,22 +6,15 @@ import axios from 'axios';
 
 const url = 'https://rickandmortyapi.com/api/character/?name=';
 
-const SearchBar = (setError) => {
+const SearchBar = ({ setError }) => {
   const [searchedCharacter, setSearchedCharacter] = useState('');
 
   const findCharacter = useCallback(async () => {
     try {
       const response = await axios.get(`${url}${searchedCharacter}`);
-      const {
-        data: { results },
-      } = response;
-
-      if (!results.error) {
-        setSearchedCharacter(results);
-        setError(false);
-      } else {
-        setError(true);
-      }
+      const { data } = response;
+      const { results } = data;
+      console.log(results);
     } catch (error) {
       setError(true);
       throw new Error(error.message || error);
@@ -30,7 +23,7 @@ const SearchBar = (setError) => {
 
   useEffect(() => {
     findCharacter();
-  }, [searchedCharacter, findCharacter]);
+  }, [findCharacter, searchedCharacter]);
 
   return (
     <form className={styles.form__container}>
