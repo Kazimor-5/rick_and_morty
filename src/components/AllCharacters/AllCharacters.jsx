@@ -20,7 +20,7 @@ const AllCharacters = () => {
 
   return (
     <>
-      <SearchBar setError={setError} characters={characters} />
+      {/* <SearchBar setError={setError} characters={characters} /> */}
       {error ? (
         <main className={styles.main__error}>
           <h2 className={styles.heading__error}>
