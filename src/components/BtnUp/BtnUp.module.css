@@ -9,7 +9,7 @@
   border: transparent;
   position: fixed;
   bottom: 5.5rem;
-  right: 2rem;
+  right: 0.5rem;
 }
 .btnUp__icon {
   color: var(--cyan);
