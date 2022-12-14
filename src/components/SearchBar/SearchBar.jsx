@@ -11,7 +11,7 @@ const SearchBar = ({ setError }) => {
 
   const findCharacter = useCallback(async () => {
     const response = await ky.get(`${url}${searchedCharacter}`).json(); // * url + value type in input field
-    console.log(response);
+    // console.log(response);
     // const {
     //   data: { results },
     // } = response;
