@@ -3,13 +3,20 @@
     "browser": true,
     "es2021": true
   },
-  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
   "overrides": [],
   "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react"],
+  "plugins": ["react", "react-hooks"],
   "rules": {
     "prefer-const": 2,
     "no-var": 2,
@@ -45,6 +52,10 @@
     "prefer-template": "error",
     "symbol-description": "error",
     "no-duplicate-imports": "error",
-    "no-unreachable-loop": "error"
+    "no-unreachable-loop": "error",
+    "react/react-in-jsx-scope": 0,
+    "react/prop-types": 0,
+    "react-hooks/exhaustive-deps": 1,
+    "react-hooks/rules-of-hooks": "error"
   }
 }

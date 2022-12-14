@@ -1,8 +1,8 @@
 // ! FILES
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import styles from './SearchBar.module.css';
 import { FaSearch } from 'react-icons/fa';
-import axios from 'axios';
+import ky from 'ky';
 
 const url = 'https://rickandmortyapi.com/api/character/?name=';
 
@@ -10,20 +10,20 @@ const SearchBar = ({ setError }) => {
   const [searchedCharacter, setSearchedCharacter] = useState('');
 
   const findCharacter = useCallback(async () => {
-    try {
-      const response = await axios.get(`${url}${searchedCharacter}`);
-      const { data } = response;
-      const { results } = data;
-      console.log(results);
-    } catch (error) {
-      setError(true);
-      throw new Error(error.message || error);
-    }
+    const response = await ky.get(`${url}${searchedCharacter}`).json(); // * url + value type in input field
+    console.log(response);
+    // const {
+    //   data: { results },
+    // } = response;
+    // console.log(results);
+    // setSearchedCharacter(results);
   }, [searchedCharacter]);
+
+  const searchCharacter = (e) => setSearchedCharacter(e.target.value);
 
   useEffect(() => {
     findCharacter();
-  }, [findCharacter, searchedCharacter]);
+  }, [findCharacter]);
 
   return (
     <form className={styles.form__container}>
@@ -35,8 +35,9 @@ const SearchBar = ({ setError }) => {
         name='searchBar'
         id='searchBar'
         className={styles.form__input}
+        // * Value typed in input field
         value={searchedCharacter}
-        onChange={(e) => setSearchedCharacter(e.target.value)}
+        onChange={searchCharacter}
         placeholder='Search character'
       />
     </form>

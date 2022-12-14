@@ -1,7 +1,6 @@
 // ! COMPONENTS
 import Navbar from '../Navbar/Navbar';
 // ! FILES
-import React from 'react';
 import styles from './Header.module.css';
 
 const Header = () => {

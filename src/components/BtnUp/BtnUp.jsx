@@ -1,5 +1,5 @@
 // ! FILES
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FaChevronUp } from 'react-icons/fa';
 import styles from './BtnUp.module.css';
 

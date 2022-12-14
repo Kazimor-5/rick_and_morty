@@ -4,7 +4,6 @@ import Details from './components/Details/Details';
 import Error from './components/Error/Error';
 import Header from './components/Header/Header';
 // ! FILES
-import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const App = () => {

@@ -1,7 +1,7 @@
 // ! COMPONENTS
 import SingleCharacter from '../SingleCharacter/SingleCharacter';
 // ! FILES
-import React, { useState } from 'react';
+import { useState } from 'react';
 import ReactPaginate from 'react-paginate';
 import useFetch from '../../useFetch';
 import BtnUp from '../BtnUp/BtnUp';
@@ -20,7 +20,7 @@ const AllCharacters = () => {
 
   return (
     <>
-      {/* <SearchBar setError={setError} characters={characters} /> */}
+      <SearchBar setError={setError} characters={characters} />
       {error ? (
         <main className={styles.main__error}>
           <h2 className={styles.heading__error}>

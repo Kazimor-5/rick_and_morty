@@ -1,6 +1,6 @@
 // ! FILES
-import axios from 'axios';
-import React, { useCallback, useEffect, useState } from 'react';
+import ky from 'ky';
+import { useCallback, useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import styles from './Details.module.css';
 
@@ -11,9 +11,8 @@ const Details = () => {
   const { id } = useParams();
 
   const getSingleCharacter = useCallback(async () => {
-    const response = await axios.get(`${url}${id}`);
-    const { data } = response;
-    setSingleCharacter(data);
+    const response = await ky.get(`${url}${id}`).json();
+    setSingleCharacter(response);
   }, [id]);
 
   useEffect(() => {

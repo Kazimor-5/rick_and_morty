@@ -1,5 +1,5 @@
 // ! FILES
-import axios from 'axios';
+import ky from 'ky';
 import { useCallback, useEffect, useState } from 'react';
 
 const useFetch = (url) => {
@@ -9,10 +9,9 @@ const useFetch = (url) => {
 
   const getCharacters = useCallback(async () => {
     try {
-      const response = await axios.get(`${url}${page}`);
-      const {
-        data: { info, results },
-      } = response;
+      const response = await ky.get(`${url}${page}`).json();
+      const { info, results } = response;
+
       setPagesTotal(info.pages);
       setCharacters(results);
     } catch (error) {
