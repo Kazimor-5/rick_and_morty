@@ -111,7 +111,7 @@ ul {
 /* ? BUTTONS */
 .btn {
   cursor: pointer;
-  background: linear-gradient(to right, #7ec251, #428859);
+  background: #7ec251;
   color: var(--white);
   border: transparent;
   border-radius: var(--border-radius);
@@ -127,16 +127,25 @@ ul {
   background: #f1f1f1f1;
   color: #428859;
 }
+.btn:hover {
+  background: #428859;
+  box-shadow: var(--shadow-3);
+}
 .btn--white:hover {
   color: #f1f1f1f1;
-}
-.btn:hover {
-  background: #7ec251;
-  box-shadow: var(--shadow-3);
 }
 /* ! main.jsx */
 #root {
   display: grid;
   place-items: center;
   gap: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .btn:hover {
+    background: #7ec251;
+    box-shadow: var(--shadow-1);
+  }
+  .btn--white:hover {
+    background: #428859;
+  }
 }

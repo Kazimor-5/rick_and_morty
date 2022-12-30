@@ -4,6 +4,7 @@ import styles from './SingleCharacter.module.css';
 
 const SingleCharacter = (character) => {
   const { name, image, id } = character;
+
   return (
     <article className={styles.singleCharacter__article}>
       <h2 className={styles.singleCharacter__name}>{name}</h2>
@@ -14,7 +15,7 @@ const SingleCharacter = (character) => {
           className={`${styles.singleCharacter__img} img`}
         />
       </div>
-      <Link className={`${styles.linksDetail} btn`} to={`/details/${id}`}>
+      <Link className='btn' to={`/details/${id}`}>
         Détails
       </Link>
     </article>

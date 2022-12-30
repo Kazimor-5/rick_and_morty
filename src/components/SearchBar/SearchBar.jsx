@@ -6,7 +6,7 @@ import ky from 'ky';
 
 const url = 'https://rickandmortyapi.com/api/character/?name=';
 
-const SearchBar = ({ setError }) => {
+const SearchBar = () => {
   const [searchedCharacter, setSearchedCharacter] = useState('');
 
   const findCharacter = useCallback(async () => {

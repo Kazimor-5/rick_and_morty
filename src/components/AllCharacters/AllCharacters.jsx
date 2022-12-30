@@ -1,12 +1,12 @@
 // ! COMPONENTS
 import SingleCharacter from '../SingleCharacter/SingleCharacter';
+import BtnUp from '../BtnUp/BtnUp';
+import SearchBar from '../SearchBar/SearchBar';
 // ! FILES
 import { useState } from 'react';
 import ReactPaginate from 'react-paginate';
 import useFetch from '../../useFetch';
-import BtnUp from '../BtnUp/BtnUp';
 import styles from './AllCharacters.module.css';
-import SearchBar from '../SearchBar/SearchBar';
 
 const url = 'https://rickandmortyapi.com/api/character/?page=';
 

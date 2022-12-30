@@ -33,6 +33,8 @@
 .singleCharacter__article:hover .singleCharacter__img {
   transform: scale(1.1);
 }
-.linksDetail {
-  font-size: clamp(1.6rem, 3vw, 2rem);
+@media screen and (max-width: 768px) {
+  .singleCharacter__article:hover .singleCharacter__img {
+    transform: scale(1);
+  }
 }
