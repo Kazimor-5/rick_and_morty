@@ -15,7 +15,7 @@ const useFetch = (url) => {
       setPagesTotal(info.pages);
       setCharacters(results);
     } catch (error) {
-      throw new Error(error.message || error);
+      throw error.message;
     }
   }, [url, page]);
 
