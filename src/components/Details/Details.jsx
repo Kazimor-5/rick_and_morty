@@ -33,7 +33,7 @@ const Details = () => {
         className={`${styles.detailsCharacter__back_btn} btn btn--white`}
         to='/'
       >
-        Retour
+        Back home
       </Link>
       <article className={styles.detailsCharacter__article}>
         <div className={styles.detailsCharacter__imgContainer}>
