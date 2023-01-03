@@ -6,18 +6,20 @@ import ky from 'ky';
 
 const url = 'https://rickandmortyapi.com/api/character/?name=';
 
-const SearchBar = () => {
+const SearchBar = ({ setError, setCharacters }) => {
   const [searchedCharacter, setSearchedCharacter] = useState('');
 
   const findCharacter = useCallback(async () => {
-    const response = await ky.get(`${url}${searchedCharacter}`).json(); // * url + value type in input field
-    console.log(response);
-    // const {
-    //   data: { results },
-    // } = response;
-    // console.log(results);
-    // setSearchedCharacter(results);
-  }, [searchedCharacter]);
+    const urlResponse = await ky.get(`${url}${searchedCharacter}`).json(); // * url + value type in input field
+    const { results } = urlResponse;
+
+    if (!results) {
+      setError(true);
+    } else {
+      setCharacters(results);
+      setError(false);
+    }
+  }, [searchedCharacter, setCharacters, setError]);
 
   const searchCharacter = (e) => setSearchedCharacter(e.target.value);
 

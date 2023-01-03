@@ -11,7 +11,7 @@ import styles from './AllCharacters.module.css';
 const url = 'https://rickandmortyapi.com/api/character/?page=';
 
 const AllCharacters = () => {
-  const { characters, setPage, pagesTotal } = useFetch(url);
+  const { characters, setPage, pagesTotal, setCharacters } = useFetch(url);
   const [error, setError] = useState(false);
 
   const changePage = ({ selected }) => {
@@ -20,7 +20,11 @@ const AllCharacters = () => {
 
   return (
     <>
-      <SearchBar setError={setError} characters={characters} />
+      <SearchBar
+        setError={setError}
+        characters={characters}
+        setCharacters={setCharacters}
+      />
       {error ? (
         <main className={styles.main__error}>
           <h2 className={styles.heading__error}>

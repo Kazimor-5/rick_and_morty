@@ -23,7 +23,7 @@ const useFetch = (url) => {
     getCharacters();
   }, [url, getCharacters, page]);
 
-  return { characters, page, setPage, pagesTotal };
+  return { characters, setCharacters, page, setPage, pagesTotal };
 };
 
 export default useFetch;
