@@ -16,7 +16,7 @@ const SingleCharacter = (character) => {
         />
       </div>
       <Link className='btn' to={`/details/${id}`}>
-        Détails
+        Details
       </Link>
     </article>
   );
