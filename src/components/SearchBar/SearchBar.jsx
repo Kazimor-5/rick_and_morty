@@ -1,8 +1,8 @@
 // ! FILES
 import { useState, useEffect, useCallback } from 'react';
-import styles from './SearchBar.module.css';
 import { FaSearch } from 'react-icons/fa';
 import ky from 'ky';
+import styles from './SearchBar.module.css';
 
 const url = 'https://rickandmortyapi.com/api/character/?name=';
 
@@ -13,11 +13,11 @@ const SearchBar = ({ setError, setCharacters }) => {
     const urlResponse = await ky.get(`${url}${searchedCharacter}`).json(); // * url + value type in input field
     const { results } = urlResponse;
 
-    if (!results) {
-      setError(true);
-    } else {
-      setCharacters(results);
+    if (results) {
       setError(false);
+      setCharacters(results);
+    } else {
+      setError(true);
     }
   }, [searchedCharacter, setCharacters, setError]);
 
