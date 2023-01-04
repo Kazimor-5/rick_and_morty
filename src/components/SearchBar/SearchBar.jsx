@@ -13,11 +13,11 @@ const SearchBar = ({ setError, setCharacters }) => {
     const urlResponse = await ky.get(`${url}${searchedCharacter}`).json(); // * url + value type in input field
     const { results } = urlResponse;
 
-    if (!results) {
-      setError(true);
-    } else {
-      setCharacters(results);
+    if (results) {
       setError(false);
+      setCharacters(results);
+    } else {
+      setError(true);
     }
   }, [searchedCharacter, setCharacters, setError]);
 
