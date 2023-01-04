@@ -1,8 +1,8 @@
 // ! FILES
 import { useState, useEffect, useCallback } from 'react';
-import styles from './SearchBar.module.css';
 import { FaSearch } from 'react-icons/fa';
 import ky from 'ky';
+import styles from './SearchBar.module.css';
 
 const url = 'https://rickandmortyapi.com/api/character/?name=';
 

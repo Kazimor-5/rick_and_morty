@@ -22,6 +22,7 @@ const AllCharacters = () => {
     <>
       <SearchBar
         setError={setError}
+        error={error}
         characters={characters}
         setCharacters={setCharacters}
       />
